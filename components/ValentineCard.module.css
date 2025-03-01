@@ -1,0 +1,288 @@
+.cardContainer {
+  position: absolute;
+  width: 120px;
+  height: 150px;
+  background-color: #ffcce5;
+  border: 4px solid #ff66cc;
+  cursor: pointer;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  transition: transform 0.2s;
+  image-rendering: pixelated;
+  box-shadow: 5px 5px 0 #ff1493;
+}
+
+.cardContainer.hover {
+  transform: translateY(-5px);
+}
+
+.cardText {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ff1493;
+  text-align: center;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+/* Hearts Card */
+.heartsCard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pixelHearts {
+  position: relative;
+  width: 80px;
+  height: 60px;
+}
+
+.pixelHeart1, .pixelHeart2 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #ff1493;
+  transform: rotate(45deg);
+}
+
+.pixelHeart1 {
+  left: 0;
+  top: 10px;
+}
+
+.pixelHeart1:before, .pixelHeart1:after,
+.pixelHeart2:before, .pixelHeart2:after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #ff1493;
+  border-radius: 50%;
+}
+
+.pixelHeart1:before {
+  top: -20px;
+  left: 0;
+}
+
+.pixelHeart1:after {
+  top: 0;
+  left: -20px;
+}
+
+.pixelHeart2 {
+  right: 0;
+  top: 10px;
+}
+
+.pixelHeart2:before {
+  top: -20px;
+  left: 0;
+}
+
+.pixelHeart2:after {
+  top: 0;
+  left: -20px;
+}
+
+/* Calendar Card */
+.calendarCard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pixelCalendar {
+  position: relative;
+  width: 60px;
+  height: 70px;
+}
+
+.calendarTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 15px;
+  background-color: #ff1493;
+}
+
+.calendarTop:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 10px;
+  width: 5px;
+  height: 10px;
+  background-color: #ffcce5;
+  box-shadow: 35px 0 0 #ffcce5;
+}
+
+.calendarBody {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 60px;
+  height: 55px;
+  background-color: white;
+  border: 2px solid #ff1493;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendarHeart {
+  width: 20px;
+  height: 20px;
+  background-color: #ff1493;
+  transform: rotate(45deg);
+  position: relative;
+}
+
+.calendarHeart:before, .calendarHeart:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ff1493;
+  border-radius: 50%;
+}
+
+.calendarHeart:before {
+  top: -10px;
+  left: 0;
+}
+
+.calendarHeart:after {
+  top: 0;
+  left: -10px;
+}
+
+/* Envelope Card */
+.envelopeCard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pixelEnvelope {
+  position: relative;
+  width: 70px;
+  height: 50px;
+}
+
+.envelopeBody {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70px;
+  height: 40px;
+  background-color: white;
+  border: 2px solid #000;
+}
+
+.envelopeFold {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 25px solid white;
+}
+
+.envelopeFold:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -33px;
+  width: 0;
+  height: 0;
+  border-left: 33px solid transparent;
+  border-right: 33px solid transparent;
+  border-bottom: 23px solid #000;
+  z-index: -1;
+}
+
+.envelopeHeart {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  width: 20px;
+  height: 20px;
+  background-color: #ff1493;
+  transform: rotate(45deg);
+  z-index: 2;
+}
+
+.envelopeHeart:before, .envelopeHeart:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ff1493;
+  border-radius: 50%;
+}
+
+.envelopeHeart:before {
+  top: -10px;
+  left: 0;
+}
+
+.envelopeHeart:after {
+  top: 0;
+  left: -10px;
+}
+
+/* Default Card */
+.defaultCard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pixelHeart {
+  width: 40px;
+  height: 40px;
+  background-color: #ff1493;
+  transform: rotate(45deg);
+  position: relative;
+}
+
+.pixelHeart:before, .pixelHeart:after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #ff1493;
+  border-radius: 50%;
+}
+
+.pixelHeart:before {
+  top: -20px;
+  left: 0;
+}
+
+.pixelHeart:after {
+  top: 0;
+  left: -20px;
+} 

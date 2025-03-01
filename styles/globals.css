@@ -1,0 +1,124 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 158, 181, 0.1),
+    rgba(255, 158, 181, 0.1) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+  image-rendering: pixelated;
+}
+
+@keyframes flicker {
+  0% { opacity: 1; }
+  25% { opacity: 0.95; }
+  50% { opacity: 1; }
+  75% { opacity: 0.9; }
+  100% { opacity: 1; }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 158, 181, 0.05) 0%,
+    rgba(255, 122, 158, 0.2) 100%
+  );
+  pointer-events: none;
+  z-index: 9998;
+  animation: flicker 2s infinite steps(4);
+}
+
+html {
+  filter: contrast(1.05) brightness(1.05);
+  image-rendering: pixelated;
+}
+
+/* Improve responsive scaling for all components */
+.bed, .desk, .poster, .computerContainer, .teddyContainer, .gameboyContainer, .milkContainer {
+  transform-origin: center bottom;
+}
+
+@media (min-width: 1200px) {
+  .bed, .desk, .poster, .computerContainer, .teddyContainer, .gameboyContainer, .milkContainer {
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 1600px) {
+  .bed, .desk, .poster, .computerContainer, .teddyContainer, .gameboyContainer, .milkContainer {
+    transform: scale(1.5);
+  }
+}
+
+@media (max-width: 800px) {
+  .bed, .desk, .poster, .computerContainer, .teddyContainer, .gameboyContainer, .milkContainer {
+    transform: scale(0.8);
+  }
+}
+
+/* Add a class for message bubbles to make them consistent */
+.messageBubble {
+  position: absolute;
+  background: #ffd6e0;
+  color: #555555;
+  border: 4px solid #ff9eb5;
+  border-radius: 0;
+  padding: 10px;
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  font-size: 10px;
+  z-index: 30;
+  box-shadow: 4px 4px 0 #ff7a9e;
+  max-width: 250px;
+  image-rendering: pixelated;
+}
+
+.messageBubbleHeader {
+  background: #ff9eb5;
+  color: #333333;
+  padding: 4px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Responsive font sizes */
+@media (min-width: 1200px) {
+  .messageBubble {
+    font-size: 12px;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 800px) {
+  .messageBubble {
+    font-size: 8px;
+    max-width: 200px;
+  }
+} 

@@ -1,0 +1,213 @@
+.computerContainer {
+  position: absolute;
+  z-index: 15;
+}
+
+.monitor {
+  position: relative;
+  width: 50px;
+  height: 40px;
+  background-color: #888888;
+  border: 3px solid #666666;
+}
+
+.screen {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  background-color: #c9f5ff;
+  border: 2px solid #888888;
+  top: 5px;
+  left: 5px;
+}
+
+.screenOn {
+  background-color: #ffecf1; /* Light pink screen background */
+}
+
+.monitorStand {
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  background-color: #ff9eb5;
+  bottom: 0;
+  left: 50px;
+  border: 4px solid #ff7a9e;
+  border-top: none;
+}
+
+.keyboard {
+  position: relative;
+  width: 70px;
+  height: 20px;
+  background-color: #aaaaaa;
+  border: 4px solid #888888;
+  border-radius: 0 0 5px 5px;
+  margin-top: -2px;
+}
+
+.mouse {
+  position: absolute;
+  width: 25px;
+  height: 40px;
+  background-color: #eee;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  top: 140px;
+  left: 170px;
+}
+
+/* Screen content styles */
+.screenContent {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-family: 'Courier New', monospace;
+}
+
+/* Boot screen */
+.bootScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #000;
+  color: #ffb6c1;
+}
+
+.bootLogo {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 5px #ffb6c1;
+}
+
+.bootProgress {
+  width: 80%;
+  height: 10px;
+  background-color: #333;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ffb6c1;
+}
+
+.bootProgress::after {
+  content: '';
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  background-color: #ffb6c1;
+  animation: progress 1.5s infinite;
+}
+
+@keyframes progress {
+  0% { left: -30%; }
+  100% { left: 100%; }
+}
+
+/* Desktop screen */
+.desktopScreen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  background-color: #ffecf1; /* Light pink screen background */
+  padding: 10px 5px;
+  image-rendering: pixelated;
+}
+
+.desktopIcon {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 158, 181, 0.5);
+  margin: 5px;
+  font-size: 8px;
+  color: #555555;
+  text-align: center;
+  padding-top: 25px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  image-rendering: pixelated;
+  /* Cute heart icons */
+  background-image: 
+    radial-gradient(#ff7a9e 8px, transparent 8px);
+  background-position: center 8px;
+  background-repeat: no-repeat;
+}
+
+.desktopIcon:hover {
+  background-color: rgba(255, 158, 181, 0.8);
+  border: 2px solid #ff7a9e;
+}
+
+.taskbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background-color: #ff66cc;
+}
+
+/* Program screen */
+.programScreen {
+  height: 100%;
+  background-color: #330033;
+  display: flex;
+  flex-direction: column;
+  color: #ff99cc;
+}
+
+.programTitle {
+  height: 15px;
+  background-color: #ff66cc;
+  color: #000;
+  font-size: 10px;
+  padding: 2px;
+  font-weight: bold;
+}
+
+.programContent {
+  padding: 5px;
+  font-size: 9px;
+  font-family: 'Courier New', monospace;
+}
+
+/* Game screen */
+.gameScreen {
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameTitle {
+  color: #ff66cc;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px #ff1493;
+}
+
+.gamePixel {
+  width: 10px;
+  height: 10px;
+  background-color: #ff66cc;
+  position: relative;
+  animation: movePixel 2s infinite steps(10); /* Steps for pixelated movement */
+  box-shadow: 0 0 5px #ff1493;
+}
+
+@keyframes movePixel {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(20px, 0); }
+  50% { transform: translate(20px, 20px); }
+  75% { transform: translate(0, 20px); }
+  100% { transform: translate(0, 0); }
+} 

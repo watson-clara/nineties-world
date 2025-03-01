@@ -1,0 +1,91 @@
+.gameboyContainer {
+  position: absolute;
+  width: 60px;
+  height: 100px;
+  cursor: pointer;
+  z-index: 12;
+  transition: transform 0.2s;
+  image-rendering: pixelated;
+}
+
+.gameboyContainer:hover {
+  transform: scale(1.1);
+}
+
+.gameboyBody {
+  position: absolute;
+  width: 60px;
+  height: 100px;
+  background-color: #ff9eb5;
+  border: 4px solid #ff7a9e;
+  border-radius: 5px 5px 15px 15px;
+}
+
+.gameboyScreen {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #ffecf1;
+  border: 4px solid #ff7a9e;
+  top: 10px;
+  left: 10px;
+}
+
+.gameboyScreenContent {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-color: #ffecf1;
+  top: 4px;
+  left: 4px;
+  /* Cute pixel heart */
+  background-image: 
+    linear-gradient(#ff7a9e 8px, transparent 8px),
+    linear-gradient(#ff7a9e 8px, transparent 8px),
+    linear-gradient(#ff7a9e 8px, transparent 8px),
+    linear-gradient(#ff7a9e 8px, transparent 8px);
+  background-position: 
+    4px 4px,
+    20px 4px,
+    12px 12px,
+    12px 20px;
+  background-repeat: no-repeat;
+  background-size: 
+    8px 8px,
+    8px 8px,
+    8px 8px,
+    8px 8px;
+}
+
+.gameboyButtons {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  top: 60px;
+  left: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gameboyButtonA, .gameboyButtonB {
+  width: 15px;
+  height: 15px;
+  background-color: #ff7a9e;
+  border-radius: 50%;
+  border: 2px solid #ff5c8d;
+}
+
+.gameboyDpad {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #ff7a9e;
+  bottom: 10px;
+  left: 15px;
+  /* Cross shape */
+  clip-path: polygon(
+    33% 0%, 66% 0%, 66% 33%, 100% 33%,
+    100% 66%, 66% 66%, 66% 100%, 33% 100%,
+    33% 66%, 0% 66%, 0% 33%, 33% 33%
+  );
+} 

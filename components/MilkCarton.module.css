@@ -1,0 +1,68 @@
+.milkContainer {
+  position: absolute;
+  width: 40px;
+  height: 70px;
+  cursor: pointer;
+  z-index: 12;
+  transition: transform 0.2s;
+  image-rendering: pixelated;
+}
+
+.milkContainer:hover {
+  transform: scale(1.1);
+}
+
+.milkCarton {
+  position: absolute;
+  width: 40px;
+  height: 60px;
+  background-color: #fff;
+  border: 4px solid #ff9eb5;
+  border-radius: 5px;
+}
+
+.milkTop {
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  background-color: #ff9eb5;
+  border: 4px solid #ff7a9e;
+  border-radius: 5px;
+  top: -10px;
+  left: 10px;
+}
+
+.milkLabel {
+  position: absolute;
+  width: 30px;
+  height: 40px;
+  background-color: #ffb6c1;
+  border: 2px solid #ff9eb5;
+  top: 10px;
+  left: 5px;
+  /* Cute strawberry pattern */
+  background-image: 
+    radial-gradient(#ff7a9e 3px, transparent 3px),
+    radial-gradient(#ff7a9e 3px, transparent 3px),
+    radial-gradient(#ff7a9e 3px, transparent 3px);
+  background-position: 5px 10px, 15px 20px, 25px 10px;
+  background-repeat: no-repeat;
+}
+
+.milkStraw {
+  position: absolute;
+  width: 6px;
+  height: 30px;
+  background-color: #ff9eb5;
+  border: 2px solid #ff7a9e;
+  top: -30px;
+  left: 17px;
+  transform: rotate(-15deg);
+}
+
+.labelText {
+  font-family: 'Courier New', monospace;
+  font-size: 8px;
+  font-weight: bold;
+  color: #d87093;
+} 

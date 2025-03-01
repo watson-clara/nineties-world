@@ -1,0 +1,87 @@
+.roomContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #c9a7e8; /* Light purple background */
+  overflow: hidden;
+  image-rendering: pixelated;
+}
+
+.room {
+  position: relative;
+  width: 95vw;
+  height: 90vh;
+  max-width: 800px;
+  max-height: 600px;
+  border: 16px solid #8b5a2b; /* Brown wooden border */
+  border-radius: 0px;
+  overflow: hidden;
+  image-rendering: pixelated;
+}
+
+/* Wall section - top part of the room */
+.wall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%; /* Wall takes up top 40% */
+  background-color: #f5efe0; /* Cream wall color */
+  z-index: 1;
+}
+
+/* Floor section - bottom part of the room */
+.floor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%; /* Floor takes up bottom 60% */
+  background-color: #b08968; /* Wooden floor color */
+  background-image: 
+    linear-gradient(90deg, rgba(139, 90, 43, 0.3) 2px, transparent 2px),
+    linear-gradient(rgba(139, 90, 43, 0.3) 2px, transparent 2px);
+  background-size: 32px 16px;
+  background-position: 0 0;
+  z-index: 1;
+}
+
+/* Divider between wall and floor */
+.divider {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #8b5a2b; /* Dark brown divider */
+  top: 40%; /* Position at the wall/floor boundary */
+  left: 0;
+  z-index: 2;
+}
+
+/* Remove game UI elements */
+.gameUI {
+  display: none;
+}
+
+.gameScore {
+  font-family: "'Press Start 2P', 'Courier New', monospace";
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.gameHealth {
+  display: flex;
+}
+
+.healthPoint {
+  width: 15px;
+  height: 15px;
+  background-color: #ff5c8d;
+  margin-right: 5px;
+  clip-path: polygon(
+    50% 0%, 61% 35%, 98% 35%, 68% 57%,
+    79% 91%, 50% 70%, 21% 91%, 32% 57%,
+    2% 35%, 39% 35%
+  );
+} 

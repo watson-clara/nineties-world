@@ -1,0 +1,154 @@
+.teddyContainer {
+  position: absolute;
+  width: 80px;
+  height: 100px;
+  cursor: pointer;
+  z-index: 12;
+  transition: transform 0.2s;
+  image-rendering: pixelated;
+}
+
+.teddyContainer:hover {
+  transform: scale(1.1);
+}
+
+.teddyHead {
+  position: absolute;
+  width: 60px;
+  height: 50px;
+  background-color: #ffb6c1;
+  border: 4px solid #ff9eb5;
+  border-radius: 50%;
+  top: 0;
+  left: 10px;
+}
+
+.teddyEar1, .teddyEar2 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffb6c1;
+  border: 4px solid #ff9eb5;
+  border-radius: 50%;
+}
+
+.teddyEar1 {
+  top: 5px;
+  left: 5px;
+}
+
+.teddyEar2 {
+  top: 5px;
+  right: 5px;
+}
+
+.teddyFace {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.teddyEye1, .teddyEye2 {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #555;
+  border-radius: 50%;
+  top: 20px;
+}
+
+.teddyEye1 {
+  left: 15px;
+}
+
+.teddyEye2 {
+  right: 15px;
+}
+
+.teddyNose {
+  position: absolute;
+  width: 10px;
+  height: 8px;
+  background-color: #ff7a9e;
+  border-radius: 50%;
+  top: 30px;
+  left: 25px;
+}
+
+.teddyBody {
+  position: absolute;
+  width: 50px;
+  height: 60px;
+  background-color: #ffb6c1;
+  border: 4px solid #ff9eb5;
+  border-radius: 25px;
+  top: 40px;
+  left: 15px;
+}
+
+.teddyArm1, .teddyArm2 {
+  position: absolute;
+  width: 15px;
+  height: 30px;
+  background-color: #ffb6c1;
+  border: 4px solid #ff9eb5;
+  border-radius: 10px;
+  top: 50px;
+}
+
+.teddyArm1 {
+  left: 0;
+  transform: rotate(-20deg);
+}
+
+.teddyArm2 {
+  right: 0;
+  transform: rotate(20deg);
+}
+
+.teddyLeg1, .teddyLeg2 {
+  position: absolute;
+  width: 15px;
+  height: 25px;
+  background-color: #ffb6c1;
+  border: 4px solid #ff9eb5;
+  border-radius: 10px;
+  bottom: 0;
+}
+
+.teddyLeg1 {
+  left: 15px;
+}
+
+.teddyLeg2 {
+  right: 15px;
+}
+
+.teddyHeart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ff7a9e;
+  transform: rotate(45deg);
+  top: 55px;
+  left: 30px;
+}
+
+.teddyHeart:before, .teddyHeart:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ff7a9e;
+  border-radius: 50%;
+}
+
+.teddyHeart:before {
+  top: -10px;
+  left: 0;
+}
+
+.teddyHeart:after {
+  top: 0;
+  left: -10px;
+} 

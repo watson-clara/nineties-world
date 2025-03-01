@@ -1,0 +1,32 @@
+.clock {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: #ffb6c1; /* Pink clock */
+  border: 4px solid #ff9eb5;
+  border-radius: 0;
+  z-index: 8;
+  cursor: pointer;
+  transition: transform 0.2s;
+  image-rendering: pixelated;
+}
+
+.clock:hover {
+  transform: scale(1.05);
+}
+
+.clockFace {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border: 2px solid #ff9eb5;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "'Press Start 2P', 'Courier New', monospace";
+  font-size: 16px;
+  color: #555555;
+} 

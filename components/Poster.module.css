@@ -1,0 +1,133 @@
+.poster {
+  position: absolute;
+  width: 120px;
+  height: 180px;
+  border: 4px solid #ff9eb5;
+  box-shadow: 4px 4px 0 #ff7a9e;
+  z-index: 5;
+  overflow: hidden;
+  background-color: #ffd6e0;
+  transition: transform 0.2s;
+  image-rendering: pixelated;
+}
+
+.poster:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Music poster */
+.musicPoster {
+  height: 100%;
+  background: linear-gradient(135deg, #ff9eb5, #ffd6e0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5px;
+}
+
+.posterTitle {
+  font-family: "'Press Start 2P', 'Courier New', monospace";
+  color: #555555;
+  font-size: 10px;
+  text-align: center;
+  text-shadow: 1px 1px 0 #ff9eb5;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.posterImage {
+  width: 80px;
+  height: 80px;
+  background-color: #ff9eb5;
+  position: relative;
+  /* Cute music note pattern */
+  background-image: 
+    radial-gradient(#fff 4px, transparent 4px),
+    radial-gradient(#fff 4px, transparent 4px),
+    radial-gradient(#fff 4px, transparent 4px);
+  background-position: 20px 20px, 60px 20px, 40px 60px;
+  background-repeat: no-repeat;
+}
+
+.posterImage:before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 20px;
+  background-color: #fff;
+  top: 24px;
+  left: 24px;
+}
+
+.posterImage:after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 20px;
+  background-color: #fff;
+  top: 24px;
+  left: 64px;
+}
+
+.posterText {
+  font-family: "'Press Start 2P', 'Courier New', monospace";
+  color: #555555;
+  font-size: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Movie poster */
+.moviePoster {
+  height: 100%;
+  background: linear-gradient(to bottom, #ff7a9e, #ff9eb5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5px;
+}
+
+.moviePoster .posterImage {
+  background-color: #fff;
+  border-radius: 0;
+  position: relative;
+  /* Cute heart pattern */
+  background-image: none;
+}
+
+.moviePoster .posterImage:before {
+  content: "♥";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: #ff7a9e;
+  top: 0;
+  left: 0;
+  border-radius: 0;
+}
+
+.moviePoster .posterImage:after {
+  display: none;
+}
+
+/* Default poster */
+.defaultPoster {
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    #ff9eb5,
+    #ff9eb5 10px,
+    #ffd6e0 10px,
+    #ffd6e0 20px
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 

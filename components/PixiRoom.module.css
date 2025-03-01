@@ -1,0 +1,149 @@
+.pixiContainer {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.messageBubble {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 3px solid #ff9eb5;
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 100;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.messageBubbleHeader {
+  background-color: #ff9eb5;
+  color: white;
+  padding: 5px;
+  margin: -10px -10px 10px -10px;
+  border-radius: 7px 7px 0 0;
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  font-size: 14px;
+}
+
+.messageBubbleContent {
+  font-family: 'Comic Sans MS', cursive;
+  color: #555;
+  font-size: 16px;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Press Start 2P', monospace;
+  color: #555555;
+  font-size: 18px;
+}
+
+.fallbackContainer {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: #d4b8e8;
+  border: 16px solid #8b5a2b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.fallbackTitle {
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  color: #555555;
+  text-shadow: 2px 2px 0 #ff9eb5;
+  font-size: 24px;
+  text-align: center;
+}
+
+.fallbackRoom {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fallbackCharacter {
+  width: 40px;
+  height: 40px;
+  background-color: #ff9eb5;
+  border: 2px solid #ff7a9e;
+  border-radius: 50%;
+  position: relative;
+}
+
+.fallbackCharacter:before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  top: 8px;
+  left: 8px;
+}
+
+.fallbackCharacter:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  background-color: #ff5c8d;
+  border-radius: 5px;
+  bottom: 8px;
+  left: 15px;
+}
+
+.fallbackMessage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 3px solid #ff9eb5;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 300px;
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive;
+  color: #555;
+}
+
+.fallbackInstructions {
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  color: #555555;
+  font-size: 12px;
+  text-align: center;
+}
+
+.retryButton {
+  background-color: #ff9eb5;
+  border: 2px solid #ff7a9e;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  color: white;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.retryButton:hover {
+  background-color: #ff7a9e;
+} 
