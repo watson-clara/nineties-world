@@ -43,4 +43,12 @@
   font-family: 'Comic Sans MS', cursive;
   color: #555;
   font-size: 16px;
+}
+
+.loading {
+  font-family: 'Press Start 2P', monospace;
+  color: #555555;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 250px;
 } 
